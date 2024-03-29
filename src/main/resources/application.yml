@@ -30,8 +30,8 @@ wfg:
 #    show-sql: true
 jwt:
   header: Authorization
-  iss: test123.demo
-  aud: tes123t.demo
+  iss: wei.demo.springbootcartsdemo
+  aud: wei.demo.springbootcartsdemo
   secret: ${JWT_SECRET}
 
   openapi:

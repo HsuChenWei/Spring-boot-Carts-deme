@@ -7,12 +7,14 @@ import io.swagger.v3.core.converter.ModelConverters;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.servers.Server;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springdoc.core.GroupedOpenApi;
+import org.springdoc.core.SpringDocUtils;
 import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,16 +25,18 @@ import org.springframework.core.io.ResourceLoader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 @Configuration
 @Slf4j
 public class OpenApiConfiguration {
-//    static {
-//        SpringDocUtils.getConfig().replaceWithSchema(LocalTime.class, new Schema<LocalTime>()
-//                .example(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")))
-//                .type("string"));
-//    }
+    static {
+        SpringDocUtils.getConfig().replaceWithSchema(LocalTime.class, new Schema<LocalTime>()
+                .example(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")))
+                .type("string"));
+    }
 
     @Value("${openapi.server.url}")
     private String serverUrl;

@@ -7,7 +7,6 @@ import com.wei.demo.springbootcartsdemo.model.User.UserLogin;
 import com.wei.demo.springbootcartsdemo.model.wrapper.RespWrapper;
 import com.wei.demo.springbootcartsdemo.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.vavr.control.Option;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

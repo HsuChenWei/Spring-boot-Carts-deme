@@ -11,8 +11,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Slf4j
 @SpringBootApplication
-@ComponentScan(basePackages = "com.wei.demo")
-@EntityScan(basePackages = "com.test123.demo.entity")
+@ComponentScan(basePackages = "com.wei.demo.springbootcartsdemo")
+@EntityScan(basePackages = "com.wei.demo.springbootcartsdemo.entity")
 @EnableJpaRepositories("com.wei.demo.springbootcartsdemo.repository")
 @EnableTransactionManagement
 @EnableAsync
